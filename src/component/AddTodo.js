@@ -25,7 +25,7 @@ class AddTodo extends Component {
 
   handleDueDateChange = (event) => {
     this.setState({
-      duedate: new Date(event).toLocaleDateString()
+      duedate: new Date(event)
     });
   };
 
@@ -61,13 +61,13 @@ class AddTodo extends Component {
           value={this.state.content}
         />
         <LocalizationProvider dateAdapter={AdapterDateFns}>         
-              <DesktopDatePicker
-              id="new-item-date"
+        	<DesktopDatePicker
+          	id="new-item-date"
             label="Due Date"
             value={this.state.duedate}
             onChange={this.handleDueDateChange}
             renderInput={(params) => <TextField {...params} />}
-              />
+        	/>
         </LocalizationProvider>
         <Button
           style={{ marginLeft: "10px" }}
