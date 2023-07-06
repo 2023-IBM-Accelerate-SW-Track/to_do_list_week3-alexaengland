@@ -10,7 +10,7 @@ class AddTodo extends Component {
     this.state = {
       content: "",
       date: "",
-      duedate : null
+      duedate: null
     };
   }
   // The handleChange function updates the react state with the new input value provided from the user and the current date/time.
@@ -25,9 +25,9 @@ class AddTodo extends Component {
 
   handleDueDateChange = (event) => {
     this.setState({
-      duedate : new Date(event).toLocaleDateString()
+      duedate: new Date(event).toLocaleDateString()
     });
-  }
+  };
 
   // The handleSubmit function collects the forms input and puts it into the react state.
   // event.preventDefault() is called to prevents default event behavior like refreshing the browser.
@@ -40,7 +40,7 @@ class AddTodo extends Component {
       this.setState({
         content: "",
         date: "",
-        duedate : null
+        duedate: null
       });
     }
   };
